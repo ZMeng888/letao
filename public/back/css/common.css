@@ -114,6 +114,7 @@ ul{
   top: 0;
   background-color: #3C8DBC;
   padding-left: 180px;
+  z-index: 666;
 }
 .lt_topbar .icon_menu,
 .lt_topbar .icon_logout{
