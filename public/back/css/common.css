@@ -153,3 +153,8 @@ ul{
 .mb_20{
   margin-bottom: 20px;
 }
+.lt_content tbody img{
+  width: auto;
+  height: 50px;
+  margin: 0 auto;
+}

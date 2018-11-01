@@ -34,7 +34,7 @@
         <a href="javascript:;" class="category"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
         <!-- 二级列表 -->
         <div class="child" style="display: block">
-          <a href="first.html">一级分类</a>
+          <a  href="first.html">一级分类</a>
           <a class="active" href="second.html">二级分类</a>
         </div>
       </li>
@@ -66,12 +66,65 @@
       <li class="active">二级分类</li>
 
     </ol>
-
+   
+    <button class="btn btn-default mb_20" id="addBtn">添加分类</button>
+     <table class="table table-bordered table-hover">
+       <thead>
+          			
+          	
+         
+         <tr>
+            <th>序号</th>
+            <th>一级分类名称</th>
+            <th>二级分类名称</th>
+            <th>二级分类LOGO</th>
+            
+         </tr>
+       </thead>
+       <tbody>
+        
+       </tbody>
+     </table>
+     <!-- 为分页准备一个容器 -->
+ <div class="text-right">
+  <ul id="paginator"></ul>
+</div>
   </div>
 
 </div>
 
+<div id="addModal" class="modal fade" tabindex="-1">
+  <!-- modal-sm 小   modal-lg 大    默认中等  -->
+  <div class="modal-dialog modal-sm">
 
+    <div class="modal-content">
+
+      <form id="form">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">添加分类</h4>
+            </div>
+            <div class="modal-body">
+              <!-- bootstrap 要求input外层 套一个 form-group, 做表单校验时, 如果不加 form-group 会报错 -->
+              <div class="form-group">
+                <input type="text" name="categoryName" class="form-control" placeholder="请输入一级分类">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="submit" class="btn btn-primary" id="addBtn">添加</button>
+            </div>
+      </form>
+      
+    </div>
+
+  </div>
+</div>
+
+  <!-- 为分页准备一个容器 -->
+  <div class="text-right">
+      <ul id="paginator"></ul>
+    </div>
 
 <!-- 退出模态框 -->
 <!-- 外层是蒙层, 内层才是真实的模态框 -->
@@ -96,16 +149,39 @@
   </div>
 </div>
 
+<script type="text/html" id="aecondTpl">
+  {{each rows v i}}
+  <tr>
+      <td>{{ i + 1 + (page - 1)*size}}</td>
+      <td>{{v.categoryName}}</td>
+      <td>	{{v.brandName}}	</td>
+      <td>
+        <img src="{{v.brandLogo}}" alt="">
+      </td>
+      
+    </tr>
+
+    {{/each}}
+</script>
 
 
+
+ 
 
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <!-- 表单验证 -->
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+  <!-- 进度条 -->
 <script src="./lib/nprogress/nprogress.js"></script>
+  <!-- 模板渲染 -->
+<script src="./lib/artTemplate/template-web.js"></script>
+  <!-- 分页插件 -->
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <!-- 判断用户登录状态 -->
 <script src="./js/checkLogin.js"></script>
 <script src="./js/common.js"></script>
+<script src="./js/second.js"></script>
 
 </body>
 </html>
