@@ -23,7 +23,7 @@ $(function(){
           currentPage = page;
           render();
       }
-    })
+    })  
   
     }
     })

@@ -143,7 +143,7 @@
 <script type="text/html" id="firstpl">
   {{each rows v i}}
   <tr>
-    <td>{{i + 1}}</td>
+    <td>{{(i + 1) + (page-1) * size}}</td>
     <td>{{v.categoryName}}</td>
 
   </tr>
