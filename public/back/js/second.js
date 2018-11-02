@@ -69,6 +69,7 @@ $(function() {
     var picUrl = data.result.picAddr;//后台返回数据
     $("#imgBox img").attr("src",picUrl);
     $('[name="brandLogo"]').val( picUrl);
+    // 改变符号对号
     $("#form").data("bootstrapValidator").updateStatus("brandLogo","VALID");
     }
   });
