@@ -1,0 +1,32 @@
+.lt_sort{
+  height: 30px;
+  line-height: 30px;
+  background-color: #EEEEEE;
+}
+.lt_sort a{
+  width: 25%;
+  text-align: center;
+  font-size: 12px;
+  float: left;
+  color: #666;
+}
+.lt_sort a.current{
+  color: orange;
+}
+input[type=color], 
+input[type=date], 
+input[type=datetime-local], 
+input[type=datetime],
+ input[type=email], 
+ input[type=month], 
+ input[type=number], 
+ input[type=password], 
+ input[type=search], 
+ input[type=tel], 
+ input[type=text], 
+ input[type=time], 
+ input[type=url], 
+ input[type=week], 
+ select, textarea{
+   margin-bottom: 0;
+ }

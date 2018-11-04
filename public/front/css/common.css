@@ -3,7 +3,7 @@ html, body {
   height: 100%;
 }
 
-ul {
+ul,li {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -18,7 +18,7 @@ img {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background-color: pink;
+  /* background-color: pink; */
   max-width: 640px;
   min-width: 320px;
   padding-top: 45px;
@@ -67,6 +67,7 @@ img {
   bottom: 0;
   left: 0;
   background-color: #006699;
+  z-index: 999;
 }
 .lt_footer li{
   float: left;
@@ -91,6 +92,66 @@ img {
 .lt_main {
   width: 100%;
   height: 100%;
-  background-color: skyblue;
+  background-color: #ffff;
   position: relative;
+}
+
+.lt_product{
+  padding: 10px;
+  
+}
+.lt_product_item{
+  padding: 10px;
+  margin-bottom:10px;
+  width: 48%;
+  float: left;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.lt_product_item img{
+ width: 130px;
+ height: 130px;
+ margin: 0 auto;
+
+}
+.lt_product_item a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.lt_product_item .info{
+ text-align: left;
+ height: 40px;
+}
+.lt_product_item .price{
+  color: red;
+}
+.lt_product_item .oldPrice{
+  text-decoration: line-through;
+}
+.lt_product_item:nth-child(2n+1){
+  margin-right: 4%;
+}
+
+
+
+
+
+/* 搜索 */
+.lt_search{
+  padding: 10px;
+  position: relative;
+}
+.lt_search .search_btn{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 0 5px 5px 0;
+}
+.lt_search input{
+  height: 34px;
+  font-size: 12px;
+  
+  border: 1px solid #007AFF;
+  border-radius: 5px;
 }
